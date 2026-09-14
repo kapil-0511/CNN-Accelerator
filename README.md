@@ -30,9 +30,6 @@ cnn_3ch_64x64/
 │   └── CNN_top.v            Top-level wrapper + SRAM arbiter
 ├── tb/
 │   └── tb_CNN.sv            SystemVerilog testbench (10 test cases)
-├── sim/
-│   ├── tb_CNN_vlog.prj      XSim project file
-│   └── tb_CNN.tcl           XSim run script
 ├── docs/
 │   └── project_report.md    Full technical report
 └── setup_project.tcl        Vivado GUI project setup script
