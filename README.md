@@ -73,37 +73,6 @@ cnn_3ch_64x64/
 
 ---
 
-## How to Run Simulation
-
-Requires Xilinx Vivado (tested on 2025.1). Run from the `sim/` directory:
-
-```bash
-# 1. Compile
-xvlog --relax -prj tb_CNN_vlog.prj
-
-# 2. Elaborate
-xelab -debug typical xil_defaultlib.tb_CNN -s tb_CNN_sim
-
-# 3. Simulate
-xsim tb_CNN_sim -tclbatch tb_CNN.tcl
-```
-
-Expected output (per test):
-```
---- Test 1/10  (t=85000) ---
-  Input [ch=0] (6x6): ...
-  Filter 0 weights (ch0 / ch1 / ch2, each 3x3): ...
-  Reference output [filter=0] (6x6): ...
-  Test 1 result: 32768 PASS  |  0 FAIL
-
-  GRAND TOTAL (10 tests x 32768): 327680 PASS  |  0 FAIL
-```
-
-To open in Vivado GUI:
-```bash
-vivado -mode batch -source setup_project.tcl
-vivado vivado_proj/cnn_3ch_64x64.xpr
-```
 
 ---
 
